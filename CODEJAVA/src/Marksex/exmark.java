@@ -1,9 +1,19 @@
 package Marksex;
 
+import java.util.Scanner;
+
 public class exmark {
 		public static void main(String[] args) {
-			int mark = 91;
+//			int mark = 91;
+			String choice = "Y";
 			
+			do {
+				
+				Scanner sc = new Scanner(System.in);
+				System.out.println("enter marks : ");
+				int mark = sc.nextInt();
+				
+				
 			if(mark>90 && mark<=100)
 			{
 				System.out.println("A grade");
@@ -26,9 +36,11 @@ public class exmark {
 			}
 			else
 			{
-				System.out.println("INVALID OUTPUT");
+				System.out.println("INVALID INPUT");
 			}
-			
+			System.out.println("do you want to continue ? Y/N ?");
+			choice = sc.next();
+		}while(choice.equalsIgnoreCase("Y"));
 		}
 	
 	
